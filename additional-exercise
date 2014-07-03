@@ -1,0 +1,15 @@
+(\f x y) -> f y x
+ans: (b -> a -> r) -> a -> b -> r
+
+(\f x y -> fst (f y x))
+ans: (b -> a -> (c, d)) -> a -> b -> c
+
+(\f x y -> f (fst y) x)
+ans: (a -> c -> r) -> c -> (a, b) -> r
+
+---------------------------------------------
+let s be (\x -> x) :: a -> a
+let k be (\x y -> x) :: a -> b -> a
+let i be (\f g x -> f x (g x)) :: (a -> b -> c) -> (a -> c) -> (b -> c)
+
+all functions can be constructed by s, k, and i (!)
